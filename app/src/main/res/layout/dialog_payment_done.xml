@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Your Plan Update Successfully"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/li"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rvvvvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/back_arrow"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/sellerImagev"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_revenue_pink" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_planid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="planid : MV9061"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_plandisplayname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Plan Type :"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_planamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount :12k"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_planduration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Validity :180 Days"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_planchatcontact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plan chat contact"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_plannoofcontacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Allowed Contact:500"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/gradient_pink"
+            android:gravity="center"
+            android:text="Ok"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+

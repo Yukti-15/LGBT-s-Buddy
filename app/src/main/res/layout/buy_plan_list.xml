@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardElevation="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <LinearLayout
+                android:layout_weight=".90"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:id="@+id/tv_buyplan"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="pay"
+                    android:textSize="16sp"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_payicon"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ccavenue_logo"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"
+                android:padding="@dimen/dp_10"
+                android:gravity="right"
+                android:src="@drawable/ic_left_arrow_2"
+                android:layout_gravity="right|center"
+                />
+
+            </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DeleteAccountActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:elevation="@dimen/dp_8"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_leftarrow_pink"
+
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Delete account"
+                    android:textColor="@color/red"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_notSatisfied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:checked="true"
+                    android:text="Not Satisfied"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_foundPartner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Found my Partner"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_Noneoftheabove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="None of the above"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Others"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_dec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Please write a brief description to help us improve our services."
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/bg_rec_solid_gray"
+                android:gravity="left"
+                android:padding="@dimen/dp_10"
+                android:text=""
+                android:textSize="16sp"
+                android:visibility="gone"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_deleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/gradient_pink"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="Delete Account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t16" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

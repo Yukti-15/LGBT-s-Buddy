@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contentRoot"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.ChatInboxActivity">
+
+    <RelativeLayout
+        android:id="@+id/chat_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_leftarrow_pink" />
+
+
+                    <ImageView
+                        android:id="@+id/preview_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/test" />
+
+
+                    <RelativeLayout
+
+                        android:id="@+id/rvvvv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toRightOf="@+id/back_arrow">
+
+                        <ImageView
+                            android:id="@+id/imgOnlineIndicator"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignRight="@+id/sellerImage"
+                            android:layout_alignBottom="@+id/sellerImage"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="0dp"
+                            android:tint="@color/colorPrimary"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_account_circle_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="21dp"
+                            android:background="@drawable/ic_information_pink" />
+
+                        <TextView
+                            android:id="@+id/sellerUserName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="20dp"
+                            android:layout_toRightOf="@+id/sellerImage"
+                            android:padding="5dp"
+                            android:text="Online"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/sellerUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_toRightOf="@+id/sellerImage"
+                            android:padding="5dp"
+                            android:text="User Name"
+                            android:textColor="@color/red"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/sellerImage"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/circle_imagecate"
+                            android:padding="0dp"
+                            android:src="@drawable/no_photo" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cy"
+            android:layout_below="@+id/cards">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chat_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                app:stackFromEnd="true">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/cy"
+
+                    android:background="@drawable/gradient_noround_pink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="7dp"
+                    android:layout_alignParentBottom="true"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="1dp"
+                        android:background="@drawable/edit_text_border"
+                        >
+
+                        <ImageView
+                            android:id="@+id/emoji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/typemsg"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_panda_pink" />
+
+                        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                            android:id="@+id/typemsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toStartOf="@+id/sendbtn"
+                            android:layout_toEndOf="@+id/emoji"
+                            android:layout_toRightOf="@+id/emoji"
+                            android:hint="Message"
+                            android:padding="10sp"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            emojicon:emojiconSize="20sp"
+                            android:background="@drawable/edit_text_border"
+
+                            />
+
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_toRightOf="@+id/emoji"
+                            android:background="@drawable/edit_text_border"
+                            android:hint="Message"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textSize="15sp"
+                            android:visibility="gone"
+                            />
+
+                        <ImageView
+                            android:id="@+id/sendbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_play_pink" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

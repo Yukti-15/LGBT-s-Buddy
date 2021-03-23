@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/a"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_height="80dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:src="@drawable/logo"
+            android:scaleType="fitCenter" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/liq"
+        android:layout_below="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_weight=".50"
+            android:id="@+id/text_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/red"
+            android:text="Email Id"
+            />
+
+
+        <TextView
+            android:layout_weight=".50"
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/red"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liqq"
+        android:layout_below="@+id/liq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:layout_weight=".50"
+            android:id="@+id/text_dialog1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/red"
+            android:text="Mobile No"
+            />
+
+        <TextView
+            android:layout_weight=".50"
+            android:id="@+id/tv_Mobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/red"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li"
+        android:layout_below="@+id/liqq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dp_10"
+        >
+        <Button
+            android:id="@+id/ok"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Ok"
+            android:layout_margin="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:background="@drawable/gradient_pink"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+

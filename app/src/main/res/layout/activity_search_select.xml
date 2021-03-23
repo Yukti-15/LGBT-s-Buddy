@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SearchSelectActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="gone"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:elevation="@dimen/dp_8"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_leftarrow_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_marginStart="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textSize="20sp"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+
+        android:id="@+id/frame_containers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom_view"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <LinearLayout
+            android:id="@+id/ll_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dp50"
+            >
+
+            <TextView
+                android:id="@+id/tv_smart_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Smart Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:id="@+id/tv_advanced_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Gender Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_occup_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Occupational Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_edu_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Educational Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:id="@+id/tv_location_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Location Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:id="@+id/tv_matrimonal_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Matrimony ID Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <TextView
+                android:id="@+id/tv_special_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:drawableRight="@drawable/ic_left_arrow_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Special case Search"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/t18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/umeedlogonew"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

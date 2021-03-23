@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F1F1F2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Profiles of members who do not meet the following criteria will be filtered out."
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="Age"
+                            android:textColor="@color/red"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_min_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Min 18 yrs"
+                                android:textColor="@color/red"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_max_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="Max 60 yrs"
+                                android:textColor="@color/red"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+                            android:id="@+id/age_selector_rsb"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            rsb:absoluteMaxValue="100"
+                            rsb:absoluteMinValue="0" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Religion Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_rounded"
+                        android:padding="3dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/ll_select_religion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_select_religion"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/p5"
+                                android:singleLine="true"
+
+                                android:text="Any religion"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="@dimen/p20"
+                            android:layout_height="@dimen/p20"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:padding="@dimen/p5"
+                            android:src="@drawable/arrow_drop_down" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Profile Posted on"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_rounded"
+                        android:padding="3dp"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/spinner_profile_created_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/Profilecreatedby"
+                            android:singleLine="true"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb_profile_with_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:text="Profile with photo"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/layout_view"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/gradient_pink"
+                    android:textColor="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Search"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+
+        />
+
+</RelativeLayout>

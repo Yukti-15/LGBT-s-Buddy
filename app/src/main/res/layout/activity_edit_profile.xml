@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:elevation="@dimen/dp_8"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_leftarrow_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_marginStart="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textSize="20sp"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="60dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <RelativeLayout
+                    android:padding="20dp"
+                    android:id="@+id/rvuserImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/back_arrow"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_userprofile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:padding="0dp"
+                        android:src="@drawable/no_photo"
+                        />
+
+                    <ImageView
+                        android:visibility="visible"
+                        android:id="@+id/imgOnlineIndicator"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignRight="@+id/iv_userprofile"
+                        android:layout_alignBottom="@+id/iv_userprofile"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        app:srcCompat="@drawable/ic_edit_pink"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                />
+
+
+
+<!--
+            <RelativeLayout
+
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ractangle_colour"
+                    android:text="Account"
+                    android:elevation="12dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_personal"
+                    android:elevation="@dimen/dp_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ractangle_white"
+                    android:text="Personal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:layout_marginStart="105dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="50dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_professional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ractangle_white"
+                    android:text="Professional"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="210dp"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="30dp"
+                    />
+
+            </RelativeLayout>
+-->
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ractangle_colour"
+                    android:elevation="12dp"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="Account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="105dp"
+                    android:background="@drawable/ractangle_white"
+                    android:elevation="@dimen/dp_8"
+                    android:gravity="center"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="45dp"
+                    android:text="Personal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_professional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:background="@drawable/ractangle_white"
+                    android:gravity="center"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="25dp"
+                    android:text="Professional"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                >
+
+                <LinearLayout
+                    android:id="@+id/li_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="User Name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_firstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="I am a"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:entries="@array/array_gender"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="How Tall Are You?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            android:orientation="horizontal"
+                            >
+
+                            <Spinner
+                                android:id="@+id/sp_feet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:textSize="10sp"
+                                android:padding="5dp"
+
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:srcCompat="@drawable/arrow_drop_down"
+                                android:padding="10dp"
+                                tools:ignore="VectorDrawableCompat" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_weight=".50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            >
+
+                            <Spinner
+                                android:id="@+id/sp_inch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:textSize="10sp"
+                                android:padding="5dp"
+
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:srcCompat="@drawable/arrow_drop_down"
+                                android:padding="10dp"
+                                tools:ignore="VectorDrawableCompat"
+                                android:layout_centerInParent="true"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Date of birth"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+                        <RelativeLayout
+                            android:layout_weight=".33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                            >
+
+                            <Spinner
+                                android:id="@+id/sp_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:textSize="10sp"
+                                android:padding="5dp"
+
+                                />
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:srcCompat="@drawable/arrow_drop_down"
+                                android:padding="10dp"
+                                tools:ignore="VectorDrawableCompat"
+                                android:layout_centerInParent="true"
+                                />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_weight=".33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+
+                            >
+
+                            <Spinner
+                                android:id="@+id/sp_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:textSize="10sp"
+                                android:padding="5dp"
+
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:srcCompat="@drawable/arrow_drop_down"
+                                android:padding="10dp"
+                                tools:ignore="VectorDrawableCompat"
+                                android:layout_centerInParent="true"
+
+                                />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_weight=".33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp"
+                            >
+
+                            <Spinner
+                                android:id="@+id/sp_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:textSize="10sp"
+                                android:padding="5dp"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                app:srcCompat="@drawable/arrow_drop_down"
+                                android:padding="10dp"
+                                tools:ignore="VectorDrawableCompat"
+                                android:layout_centerInParent="true"
+
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/li_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <TextView
+                            android:id="@+id/et_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="14sp"
+                            android:padding="12dp"
+                            android:textColor="@color/colorBlack"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            android:layout_centerInParent="true"
+                            tools:ignore="VectorDrawableCompat" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="What is your marital status?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+                        <Spinner
+                            android:id="@+id/sp_material"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Do You Have Children?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <RadioButton
+                            android:id="@+id/rb_typeYes"
+                            android:layout_width="100dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:text="Yes"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            />
+                        <RadioButton
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/rb_typeNo"
+                            android:layout_width="100dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:text="No"
+                            android:background="@drawable/bg_rec_solid_gray"
+                            />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Which Religion Do You Identify With ?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_religon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="What is your Ethnicity?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="What is your Mother Tongue?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+                        <Spinner
+                            android:id="@+id/sp_motherToung"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="5dp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/li_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Hobbies and Interests"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_hobbies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Looking For"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:visibility="gone"
+                        android:id="@+id/et_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_interest"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Country"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_countrys"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="State"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="City"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+
+                        <Spinner
+                            android:id="@+id/sp_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Phone Number"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="phone"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:focusable="false"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Email Address"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:focusable="false"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Describe your dream partner in 10 characters"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="left"
+                        android:inputType="textEmailAddress"
+                        android:hint="I am looking for a serious relationship/life partner"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="left"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/li_prfessional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Educational Qualification?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+                        <Spinner
+                            android:id="@+id/sp_education"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Profession?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        >
+                        <Spinner
+                            android:id="@+id/sp_profession"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:textSize="10sp"
+                            android:padding="5dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/arrow_drop_down"
+                            android:padding="10dp"
+                            tools:ignore="VectorDrawableCompat"
+                            android:layout_centerInParent="true"
+
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Annual Income?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/et_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Short Bio"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+
+                    <EditText
+                        android:id="@+id/et_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/bg_rec_solid_gray"
+                        android:drawablePadding="6dp"
+                        android:gravity="left"
+                        android:padding="12dp"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:id="@+id/bt_savedetails"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Details"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient_noround_pink"
+        />
+
+</RelativeLayout>

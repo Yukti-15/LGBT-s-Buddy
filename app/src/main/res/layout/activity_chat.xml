@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:elevation="@dimen/dp_8"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_leftarrow_pink"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Chats"
+                    android:textColor="@color/red"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--
+                        <RelativeLayout
+
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_accepted"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ractangle_colour"
+                                android:text="Accepted"
+                                android:elevation="12dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_newrequest"
+                                android:elevation="@dimen/dp_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ractangle_white"
+                                android:text="New Request"
+                                android:textAllCaps="false"
+                                android:textColor="@color/red"
+                                android:gravity="center"
+                                android:layout_marginStart="105dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_panding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ractangle_white"
+                                android:text="  Panding  "
+                                android:textAllCaps="false"
+                                android:textColor="@color/red"
+                                android:layout_marginStart="210dp"
+                                android:gravity="center"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                />
+
+                        </RelativeLayout>
+            -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_accepted"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ractangle_colour"
+                    android:elevation="12dp"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="Accepted"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_newrequest"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="105dp"
+                    android:background="@drawable/ractangle_white"
+                    android:elevation="@dimen/dp_8"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="New Request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/tv_panding"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:background="@drawable/ractangle_white"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:text="Pending"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chat_recy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

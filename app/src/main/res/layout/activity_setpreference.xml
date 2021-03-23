@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.TellusaboutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:elevation="@dimen/dp_8"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_leftarrow_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_marginStart="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set Preference"
+                    android:textSize="20sp"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginBottom="50dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Gender Should Be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+                    style="@style/mySpinnerItemStyle"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Age Should be between"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <RelativeLayout
+                    android:layout_weight=".50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rec_solid_gray"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/sp_minAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="10sp"
+                        android:padding="5dp"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        app:srcCompat="@drawable/arrow_drop_down"
+                        android:padding="10dp"
+                        android:layout_centerInParent="true"
+
+                        tools:ignore="VectorDrawableCompat" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_weight=".50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rec_solid_gray"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+
+                    >
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="10sp"
+                        android:padding="5dp"
+                        android:id="@+id/sp_maxAge"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        app:srcCompat="@drawable/arrow_drop_down"
+                        android:padding="10dp"
+                        android:layout_centerInParent="true"
+
+                        tools:ignore="VectorDrawableCompat" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Height Should be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+                <RelativeLayout
+                    android:layout_weight=".50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rec_solid_gray"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/sp_minHight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="10sp"
+                        android:padding="5dp"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        app:srcCompat="@drawable/arrow_drop_down"
+                        android:padding="10dp"
+                        tools:ignore="VectorDrawableCompat"
+                        android:layout_centerInParent="true"
+
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_weight=".50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rec_solid_gray"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+
+                    >
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="10sp"
+                        android:padding="5dp"
+                        android:id="@+id/sp_maxHight"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        app:srcCompat="@drawable/arrow_drop_down"
+                        android:padding="10dp"
+                        tools:ignore="VectorDrawableCompat"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Cash Should be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/et_annualIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="14sp"
+                />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Education should be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Profession should be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Location Should be"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Special Cases (Handicap)"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_specialCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Describe your dream partner in 50 characters"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_rec_solid_gray"
+                android:drawablePadding="6dp"
+                android:hint="Sweet simple loving and caring......"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="14sp"
+                />
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_preference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_noround_pink"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Set Preference"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

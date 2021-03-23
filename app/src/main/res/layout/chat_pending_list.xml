@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardElevation="8dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="@dimen/dp_10"
+        >
+
+
+    <LinearLayout
+        android:layout_weight=".40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/rvvvvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/back_arrow">
+
+                <ImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/no_photo"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/ff"
+                    android:layout_alignRight="@+id/ff"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:tint="@color/red"
+                    app:srcCompat="@drawable/ic_close_black_24dp" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight=".60"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/red"
+                android:textSize="17sp"
+
+                />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_heart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/heart"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/chat_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:layout_marginBottom="40dp"
+
+                />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+
+            <Button
+                android:id="@+id/bt_Cancel"
+                android:layout_weight=".50"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/p30"
+                android:text="Cancel"
+                android:background="@drawable/gradient_pink"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginRight="3dp"
+                />
+
+            <Button
+                android:id="@+id/bt_moreInfo"
+                android:layout_marginLeft="3dp"
+                android:layout_weight=".50"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/p30"
+                android:text="More Info"
+                android:background="@drawable/gradient_pink"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

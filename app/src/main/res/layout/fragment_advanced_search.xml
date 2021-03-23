@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_below="@+id/banner_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F1F1F2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Profiles of members who do not meet the following criteria will be filtered out."
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/layout_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textStyle="bold"
+                        android:text="Looking For"
+                        android:textColor="@color/textColor"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_groom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Groom"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_bride"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Bride"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                    </RadioGroup>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Marital Status"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/nevr_married_radio_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Never Married"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/widowed_radio_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Widowed"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/divorced_radio_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Divorced"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/seperated_radio_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="Separated"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:textSize="14sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_min_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Min 18 yrs"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_max_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Max 60 yrs"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+                        android:id="@+id/age_selector_rsb"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        rsb:absoluteMaxValue="100"
+                        rsb:absoluteMinValue="0"
+                        android:outlineAmbientShadowColor="@color/red"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Religion Details"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_religion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_religion"
+                            android:text="Any religion"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:textColor="@color/red"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Caste"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_cast"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_cast"
+                            android:text="Any Cast"
+                            android:padding="@dimen/p5"
+
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Country"
+                    android:textColor="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_country"
+                            android:text="Select"
+                            android:textColor="@color/red"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="State"
+                    android:textColor="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_state"
+                            android:text="Select"
+                            android:textColor="@color/red"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="City"
+                    android:textColor="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_city"
+                            android:text="Select"
+                            android:textColor="@color/red"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Education"
+                    android:textColor="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_edu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_edu"
+                            android:text="Select"
+                            android:textColor="@color/red"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Occupation"
+                    android:textColor="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rounded"
+                    android:padding="3dp">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_select_occup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_select_occup"
+                            android:text="Select"
+                            android:textColor="@color/red"
+                            android:padding="@dimen/p5"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_width="@dimen/p20"
+                        android:padding="@dimen/p5"
+                        android:layout_height="@dimen/p20" />
+
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_profile_with_photo"
+                    android:text="Profile with photo"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Gender Should Be"
+                android:textColor="@color/red"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+                    style="@style/mySpinnerItemStyle"
+                    android:textColor="@color/red"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:textColor="@color/red"
+
+                android:text="Sexual orientation"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rec_solid_gray"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_sexualOrientation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:textSize="10sp"
+                    android:padding="5dp"
+                    style="@style/mySpinnerItemStyle"
+                    android:textColor="@color/red"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:srcCompat="@drawable/arrow_drop_down"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_margin="@dimen/dp_10"
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/layout_view"
+                android:layout_height="50dp"
+                android:background="@drawable/gradient_pink"
+                android:textColor="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

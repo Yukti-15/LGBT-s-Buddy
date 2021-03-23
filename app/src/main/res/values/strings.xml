@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Umeed</string>
+
+    <string name="reset_now"><u>Reset Now</u></string>
+    <string name="terms_condition"><u>Terms &amp; Conditions</u></string>
+    <string name="not_register"><u>Register Now</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="YOUR_KEY_ID">rzp_live_Hey6biKi3GPbET</string>
+
+    <!--    <string name="YOUR_KEY_ID">rzp_test_iJ6VFn7gznU4NJ</string>-->
+
+    <!-- <string name="YOUR_KEY_ID">rzp_test_iJ6VFn7gznU4NJ</string>
+-->
+    <string name="notification_channel_id">default</string>
+    <string name="facebook_app_id">573801643398142</string>
+    <string name="fb_login_protocol_scheme">fb573801643398142</string>
+
+
+    <string-array name="array_gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="array_day">
+        <item>Day</item>
+        <item>Day</item>
+        <item>Day</item>
+    </string-array>
+
+    <string-array name="array_month">
+        <item>Month</item>
+        <item>Month</item>
+        <item>Month</item>
+    </string-array>
+    <string-array name="array_year">
+        <item>Year</item>
+        <item>Year</item>
+        <item>Year</item>
+    </string-array>
+
+
+    <string-array name="array_Feet">
+        <item>Feet</item>
+        <item>Feet</item>
+        <item>Feet</item>
+    </string-array>
+
+    <string-array name="array_inch">
+        <item>Inch</item>
+        <item>Inch</item>
+        <item>Inch</item>
+    </string-array>
+
+    <string-array name="array_marital">
+        <item>Unmarried</item>
+        <item>Widowed</item>
+        <item>Divorced</item>
+        <item>Seprated</item>
+    </string-array>
+
+    <string-array name="array_mothertoung">
+        <item>Mother Toung</item>
+        <item>Hindi</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="array_minage">
+        <item>Min</item>
+        <item>Min</item>
+        <item>Min</item>
+    </string-array>
+
+    <string-array name="array_maxage">
+        <item>Max</item>
+        <item>Max</item>
+        <item>Max</item>
+    </string-array>
+
+    <string-array name="Profilecreatedby">
+        <item>Select</item>
+    </string-array>
+
+
+    <string-array name="levelArray">
+        <item>Lv1</item>
+        <item>Lv2</item>
+        <item>Lv3</item>
+        <item>Lv4</item>
+        <item>Lv5</item>
+    </string-array>
+</resources>

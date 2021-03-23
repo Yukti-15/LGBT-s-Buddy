@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:elevation="@dimen/dp_8"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logo"
+                    tools:ignore="VectorDrawableCompat"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_home_pink"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                  android:visibility="gone"
+
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.fangxu.allangleexpandablebutton.AllAngleExpandableButton
+            android:id="@+id/button_expandable_90_180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="15dp"
+            android:visibility="visible"
+            app:aebAnimDurationMillis="175"
+            app:aebButtonElevation="4dp"
+            app:aebButtonGapDp="10dp"
+            app:aebEndAngleDegree="90"
+            app:aebIsSelectionMode="false"
+            app:aebMainButtonRotateDegree="-135"
+            app:aebMainButtonSizeDp="45dp"
+            app:aebRippleEffect="true"
+            app:aebStartAngleDegree="90"
+            app:aebSubButtonSizeDp="45dp"
+
+            />
+
+        <Button
+            android:id="@+id/activity_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+
