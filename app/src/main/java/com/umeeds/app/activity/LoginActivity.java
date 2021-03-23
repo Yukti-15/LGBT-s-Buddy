@@ -48,10 +48,8 @@ import static com.umeeds.app.network.networking.Constant.USER_GENDER;
 public class LoginActivity extends AppCompatActivity {
     TextView tv_forget_password, tv_register, tv_termsCondition;
     Button bt_registration, btn_login;
-
-    EditText et_emailId, et_mobile;
-
-    AppCompatEditText et_password;
+    EditText et_emailId, et_mobile,et_password;
+    //AppCompatEditText et_password;
     ProgressBar progress_bar;
     // private ProgressDailog progress;
     String newToken;
@@ -67,10 +65,9 @@ public class LoginActivity extends AppCompatActivity {
      //   bt_registration = findViewById(R.id.bt_registration);
         tv_register = findViewById(R.id.tv_register);
         btn_login = findViewById(R.id.btn_login);
-
-        et_emailId = findViewById(R.id.et_emailId);
+     //   et_emailId = findViewById(R.id.et_emailId);
 //        et_mobile = findViewById(R.id.et_mobile);
-//        et_password = findViewById(R.id.et_password);
+    //   et_password = findViewById(R.id.et_password);
         progress_bar = findViewById(R.id.progress_bar);
    //     tv_termsCondition = findViewById(R.id.tv_termsCondition);
 
@@ -114,27 +111,27 @@ public class LoginActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-        et_mobile.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-                if (s.length() > 1) {
-                    btn_login.setText("SEND OTP");
-                    et_password.setText("");
-                    et_emailId.setText("");
-                }
-            }
-        });
+//        et_mobile.addTextChangedListener(new TextWatcher() {
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//            }
+//
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start,
+//                                          int count, int after) {
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start,
+//                                      int before, int count) {
+//                if (s.length() > 1) {
+//                    btn_login.setText("SEND OTP");
+//                    et_password.setText("");
+//                    et_emailId.setText("");
+//                }
+//            }
+//        });
 
 //        et_password.addTextChangedListener(new TextWatcher() {
 //
@@ -167,10 +164,10 @@ public class LoginActivity extends AppCompatActivity {
                     LoginApi(et_emailId.getText().toString(), et_password.getText().toString(), newToken);
                 }
             } else {
-                if (validationSuccess2()) {
-                    progress_bar.setVisibility(View.VISIBLE);
-                    verifyEmailMobile("a@gmail.com", et_mobile.getText().toString());
-                }
+//                if (validationSuccess2()) {
+//                    progress_bar.setVisibility(View.VISIBLE);
+//                    verifyEmailMobile("a@gmail.com", et_mobile.getText().toString());
+//                }
             }
         });
 
